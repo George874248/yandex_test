@@ -1,0 +1,224 @@
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  padding: 8px 14px;
+  background: var(--color-dark);
+  color: #fff;
+  border-radius: 999px;
+  transform: translateY(-200%);
+  transition: transform 0.25s ease;
+  z-index: 100;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.hero {
+  position: relative;
+  background-color: var(--color-hero-bg);
+  background-image:
+    url('/assets/img/head-group.png'),
+    url('/assets/img/hero-head-second-layer.png'),
+    url('/assets/img/hero-head-first-layer.png');
+  background-size: contain, cover, cover;
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-blend-mode: normal, multiply, multiply;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 700px;
+}
+
+.hero__decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 5;
+  padding-block: 26px 80px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.logo__horses {
+  display: inline-flex;
+  gap: 2px;
+  width: auto;
+}
+.logo__horses svg {
+  width: 22px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.logo__text {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.logo__br {
+  display: none;
+}
+
+.hero__content {
+  margin-top: clamp(40px, 7vw, 92px);
+  max-width: 600px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 5.5vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero__title > span {
+  display: block;
+  font-weight: 400;
+}
+
+.hero__title--accent {
+  align-self: center;
+  font-weight: 700 !important;
+}
+
+.hero__lede {
+  margin-top: 24px;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.4;
+  color: var(--color-text);
+  max-width: 542px;
+}
+
+.hero__btns {
+  margin-top: clamp(28px, 4vw, 50px);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 263px;
+  height: 72px;
+  padding: 0 50px;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.btn--primary {
+  background: var(--color-dark);
+  color: #fff;
+  box-shadow: 0 14px 30px -16px rgba(31, 31, 31, 0.6);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -14px rgba(245, 73, 50, 0.55);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  box-shadow: none;
+}
+
+.btn--secondary:hover {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero__inner {
+    padding-block: 18px 80px;
+    min-height: 640px;
+  }
+  .hero__title--accent {
+    margin-right: 60px;
+  }
+  .hero__btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    min-width: 0;
+    height: 56px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo__text {
+    font-size: 14px;
+    white-space: normal;
+  }
+  .logo__br {
+    display: inline;
+  }
+
+  .hero__lede {
+    font-size: 14px;
+  }
+  .hero__title {
+    letter-spacing: -0.015em;
+    font-size: clamp(28px, 9vw, 40px);
+  }
+  .hero__title--accent {
+    margin-right: 0;
+  }
+}

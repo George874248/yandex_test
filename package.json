@@ -1,0 +1,15 @@
+{
+  "name": "vasyuki-landing",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Адаптивный лендинг «Клуб четырёх коней» — Васюки. Сверстано на чистом HTML+CSS+JS, собрано на Vite.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,18 @@
+.footer {
+  background: #e9ded4;
+  padding-block: 40px 56px;
+  border-top: 1px solid var(--color-line);
+}
+.footer p {
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  max-width: 1222px;
+  margin-inline: auto;
+}
+
+@media (max-width: 540px) {
+  .footer p {
+    font-size: 12px;
+  }
+}
